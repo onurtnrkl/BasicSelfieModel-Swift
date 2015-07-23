@@ -78,11 +78,11 @@ public class Selfie: Instagram
         {
             if(self.IsFamous)
             {
-                likeCount = 11
+                likeCount = 500 - barzoCount
             }
             else
             {
-                likeCount = 500 - barzoCount
+                likeCount = 12
             }
         }
         else if(self.Gender == "female")
