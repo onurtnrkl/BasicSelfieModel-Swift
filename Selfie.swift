@@ -49,7 +49,7 @@ public class Instagram
 public class Selfie: Instagram
 {
     var showBoobs: Bool
-    var isTitsBig: Bool
+    var isBigBoobs: Bool
     
     init(showBoobs: Bool, isBigBoobs: Bool, gender: String)
     {
