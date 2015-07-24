@@ -48,10 +48,13 @@ public class Instagram
 
 public class Selfie: Instagram
 {
-    var showBoobs = false
+    var showBoobs: Bool
+    var isTitsBig: Bool
     
-    override init(gender: String)
+    init(showBoobs: Bool, isBigBoobs: Bool, gender: String)
     {
+        self.showBoobs = showBoobs
+        self.isBigBoobs = isBigBoobs
         super.init(gender: gender)
     }
     
@@ -67,9 +70,21 @@ public class Selfie: Instagram
         }
     }
     
-    public func TakePhoto(showBoobs: Bool)
+    public var IsBigBoobs: Bool
+        {
+        get
+        {
+            return self.isBigBoobs
+        }
+        set(newValue)
+        {
+            self.isBigBoobs = newValue
+        }
+    }
+    
+    public func TakePhoto()
     {
-        if(showBoobs)
+        if(self.ShowBoobs)
         {
             self.IsFamous = true
         }
@@ -89,22 +104,29 @@ public class Selfie: Instagram
         {
             if(self.IsFamous)
             {
-                likeCount = 1500
+                if(self.IsBigBoobs)
+                {
+                    likeCount = 5000
+                }
+                else
+                {
+                    likeCount = 1500
+                }
             }
             else
             {
                 likeCount = 100
             }
-        }
-        
-        while barzoCount < 200 && ShowBoobs
-        {
-            self.barzoCount--
-            likeCount++
-            println("Memintolar da tombikoymuş :))))")
+            
+            while barzoCount < 200 && ShowBoobs
+            {
+                self.barzoCount--
+                likeCount++
+                println("Memintolar da tombikoymuş :))))")
+            }
         }
     }
 }
 
-var Mahmut = Selfie(gender: "male")
-Mahmut.TakePhoto(false)
+var Kate = Selfie(showBoobs: true, isTitsBig: true, gender: "female")
+Kate.TakePhoto()
