@@ -9,6 +9,7 @@
 public class Instagram
 {
     var barzoCount = 85
+    var kezoCount = 50
     var gender: String
     var isFamous: Bool
     var likeCount: Int
@@ -94,6 +95,13 @@ public class Selfie: Instagram
             if(self.IsFamous)
             {
                 likeCount = 500 - barzoCount
+                
+                while kezoCount < 100
+                {
+                    self.kezoCount--
+                    self.likeCount++
+                    println("Ayyy çok yakışıklıaaaaa")
+                }
             }
             else
             {
@@ -106,7 +114,7 @@ public class Selfie: Instagram
             {
                 if(self.IsBigBoobs)
                 {
-                    likeCount = 5000
+                    likeCount = 5000 - kezoCount
                 }
                 else
                 {
@@ -121,7 +129,7 @@ public class Selfie: Instagram
             while barzoCount < 200 && ShowBoobs
             {
                 self.barzoCount--
-                likeCount++
+                self.likeCount++
                 println("Memintolar da tombikoymuş :))))")
             }
         }
