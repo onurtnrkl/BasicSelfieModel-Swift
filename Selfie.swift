@@ -128,5 +128,5 @@ public class Selfie: Instagram
     }
 }
 
-var Kate = Selfie(showBoobs: true, isTitsBig: true, gender: "female")
+var Kate = Selfie(showBoobs: true, isBigBoobs: true, gender: "female")
 Kate.TakePhoto()
